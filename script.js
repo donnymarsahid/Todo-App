@@ -8,11 +8,11 @@ let dataTodo = [];
 window.onload = function () {
   if (localStorage.getItem('todoList') != null) {
     dataTodo = JSON.parse(localStorage.getItem('todoList'));
-    render();
+    display();
   }
 };
 
-function render() {
+function display() {
   let list = '';
   for ([i, data] of dataTodo.entries()) {
     list += `
@@ -38,7 +38,7 @@ addTodo.addEventListener('click', () => {
     };
     dataTodo.push(createDataTodo);
     localStorage.setItem('todoList', JSON.stringify(dataTodo));
-    render();
+    display();
   }
 });
 
