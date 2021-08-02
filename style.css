@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --black: #3d3d3d;
+  --red: #fe4e30;
+}
+
+* body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+}
+
+body h3 {
+  font-size: 24px;
+}
+
+nav {
+  background-color: var(--red);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .profile {
+  display: flex;
+  font-weight: 500;
+}
+
+nav .profile p {
+  padding: 5px 6.5px 0 0;
+  margin: 0;
+}
+
+section .container {
+  display: grid;
+  width: 100%;
+  height: 500px;
+  grid-template-areas: 'results input' 'results input';
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+section .container .results {
+  grid-area: results;
+  padding: 30px;
+  background-image: url('img/double-bubble-outline.png');
+}
+
+section .container .input {
+  grid-area: input;
+  padding: 30px;
+  background-image: url('img/y-so-serious-white.png');
+}
+
+section .container .input input {
+  font-size: 14px;
+  width: 90%;
+  height: 45px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+  padding: 8px;
+  outline: none;
+}
+
+section .container .input .icon-add {
+  background-color: rgb(2, 179, 2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+section .container .input .box-input-icon {
+  display: flex;
+  width: 100%;
+}
+
+section .container .input .result {
+  display: flex;
+}
+
+section .container .results .box,
+section .container .input .box {
+  border-radius: 8px;
+  height: 100%;
+  padding: 20px;
+  background-color: rgb(224, 224, 224);
+  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.171);
+  overflow-y: scroll;
+}
+
+section .container .input .box {
+  padding: 20px 20px 0 20px;
+}
+
+section .result {
+  display: flex;
+}
+
+section .result .text {
+  width: 90%;
+  background-color: white;
+  height: 45px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+}
+
+section .result .text p {
+  margin: 0;
+  font-weight: 500;
+}
+
+section .result i.fas {
+  background-color: var(--red);
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 10%;
+  margin-right: -10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+}
